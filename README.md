@@ -1,4 +1,6 @@
-lab_03
-======
+Labwork # 3
+===========
 
-Client-Server app for sending files with sockets.
+<h2>Client-Server application with file transfer.</h2>
+<h3>Socket based, POSIX threads.</h3>
+
