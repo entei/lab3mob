@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 			pthread_create(&thread, NULL, send_file_to_client, (void*)&mes);
 		}
 		
-
+//Socket close
 		close(sock);
 		free(info.content);
 		return 0;
