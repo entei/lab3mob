@@ -7,7 +7,7 @@ all:
 	make client
 
 server:
-	$(CROSS_COMPILE)$(CC) -lpthread file_sender.c file_read.c server.c -o server
+	$(CROSS_COMPILE)$(CC) -pthread -o server file_sender.c file_read.c server.c
 
 client:
 	$(CROSS_COMPILE)$(CC) client.c -o client
