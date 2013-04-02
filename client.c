@@ -23,7 +23,7 @@ int main(int argc, char * argv[])
     //allocating memory for received data and creating socket
     memset(recvBuff, '0',sizeof(recvBuff));
     if((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-        printf("\n Error : Could not create socket \n");
+        printf("\n Error : Couldn't create socket\n");
         return 1;
     }
 
@@ -33,13 +33,13 @@ int main(int argc, char * argv[])
     server_address.sin_port = htons(5000); 
 
     if(inet_pton(AF_INET, argv[1], &server_address.sin_addr)<=0) {
-        printf("\n Error : wrong address\n");
+        printf("\n Error : Incorrect address\n");
         return 1;
     } 
 
     //connecting and handling error
     if( connect(sockfd, (struct sockaddr *)&server_address, sizeof(server_address)) < 0) {
-       printf("\n Error : Connect Failed \n");
+       printf("\n Error : Can't connect. Conenction Failed. \n");
        return 1;
     } 
 
