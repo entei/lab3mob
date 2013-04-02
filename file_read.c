@@ -33,6 +33,7 @@ struct file_info read_file(char * file_name)
 		fputs("Error. Can't read.", stderr);
 		exit(3);
 	}
+	//file close
 	fclose(pFile);
 	return info;
 }
